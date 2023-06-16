@@ -27,7 +27,7 @@ workflow {
         .map{ file -> tuple (file.simpleName, file) }
         .ifEmpty { error "Cannot find any assemblies matching: ${final_params.assemblies}" }
 
-    SKA(assemblies_ch, final_params.kmer_identity, final_params.snp_threshold)
+    SKA(assemblies_ch)
 }
 
 // Messages on completion 
