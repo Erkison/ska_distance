@@ -1,6 +1,6 @@
 include { SKA_SPLIT; SKA_MERGE; SKA_SUMMARY; SKA_DISTANCE } from '../modules/processes.nf' 
 
-workflow QC {
+workflow SKA {
     take:
         assemblies_ch
 
