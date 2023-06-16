@@ -1,6 +1,8 @@
 process SKA_SPLIT {
     tag "Split ${sample_id}"
 
+    label 'medium_resource_req'
+
     input:
         tuple val(sample_id), path(assembly)
 
@@ -54,7 +56,7 @@ process SKA_SUMMARY {
 process SKA_DISTANCE {
     tag "Calculate distance"
 
-    label 'medium_resource_req'
+    label 'big_resource_req'
 
     publishDir "${params.output_dir}/", 
         mode: 'copy',
