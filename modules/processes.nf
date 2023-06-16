@@ -19,6 +19,9 @@ process SKA_MERGE {
     publishDir "${params.output_dir}/", 
         mode: 'copy',
         pattern: "merged.skf"
+
+    label 'big_resource_req'
+
     
     input:
     path(skf_files)
