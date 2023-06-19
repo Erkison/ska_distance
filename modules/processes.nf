@@ -43,14 +43,14 @@ process SKA_SUMMARY {
         pattern: "split_kmers_summary.txt"
     
     input:
-    path(merged_skfs)
+    path(skfs)
 
     output:
     path("split_kmers_summary.txt")
     
     script:
     """
-    ska summary ${merged_skfs} > split_kmers_summary.txt
+    ska summary ${skfs} > split_kmers_summary.txt
     """
 }
 
@@ -64,13 +64,13 @@ process SKA_DISTANCE {
         pattern: "distances.*"
 
     input:
-        path(merged_skfs)
+        path(skfs)
 
     output:
         path("distances.*")
 
     script:
     """
-    ska distance -s ${params.snp_threshold} -i ${params.kmer_identity} ${merged_skfs}
+    ska distance -s ${params.snp_threshold} -i ${params.kmer_identity} ${skfs}
     """
 }
