@@ -12,6 +12,7 @@ def help_message() {
          --snp_threshold                Cluster SNP threshold (default: 20)
          --kmer_identity                Minimum split kmer identity (default: 0.95)
          --kmer_size                    Split Kmer size. The kmer used for searches will be twice this length. Must be divisible by 3. (default: 15)
+         --ska_distance_prefix          Prefix for distance and cluster files (default: 'distance')
 
          --help                         This usage statement
          --version                      Version statement

@@ -71,6 +71,6 @@ process SKA_DISTANCE {
 
     script:
     """
-    ska distance -s ${params.snp_threshold} -i ${params.kmer_identity} ${skfs}
+    ska distance -s ${params.snp_threshold} -i ${params.kmer_identity} ${skfs} -o ${params.ska_distance_prefix}
     """
 }
