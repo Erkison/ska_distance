@@ -11,7 +11,7 @@ def default_params(){
     params.kmer_identity = 0.95
     params.snp_threshold = 15
     params.kmer_size = 15
-    ska_distance_prefix = distance
+    ska_distance_prefix = 'distance'
 
     return params
 }
