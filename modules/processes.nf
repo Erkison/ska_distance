@@ -61,13 +61,13 @@ process SKA_DISTANCE {
 
     publishDir "${params.output_dir}/", 
         mode: 'copy',
-        pattern: "distances.*"
+        pattern: "${params.ska_distance_prefix}.*"
 
     input:
         path(skfs)
 
     output:
-        path("distances.*")
+        path("${params.ska_distance_prefix}.*")
 
     script:
     """
