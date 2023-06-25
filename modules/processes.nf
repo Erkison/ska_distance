@@ -1,6 +1,8 @@
 process SKA_SPLIT {
     tag "Split ${sample_id}"
 
+    label 'medium_resource_req'
+
     input:
         tuple val(sample_id), path(assembly)
 
